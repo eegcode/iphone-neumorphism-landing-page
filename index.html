@@ -1,0 +1,96 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>I-phone</title>
+		<!-- my  Custom Stylesheet -->
+		<link rel="stylesheet" href="style.css">
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+
+<!-- <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script> -->
+		<!-- <script>
+			document.body.innerHTML += `<div class="loader" style="position:fixed; top:0; left:0;width: 10px; height: 10px; background: hsl(0,100%,45%); z-index: 999999999999; transition: opacity .3s">
+		</div>`
+			window.addEventListener('DOMContentLoaded',()=>{
+
+			
+			const loader = document.querySelector('.loader');
+			const body = document.body;
+
+			var queue = new createjs.LoadQueue();
+
+			queue.on("progress", e =>{
+				const progress = e.progress * 100;
+				if(progress === 0){
+					loader.style.width = 10 + 'px';
+				}else if(progress !== 100){
+				loader.style.width = progress + '%';
+				console.log(progress)
+				}else{
+					body.style.opacity = '1';
+					console.log("done" ,">>>" ,progress)
+					loader.style.opacity = '0';
+
+				}
+				
+			});
+
+			queue.loadFile('apple logo.png');
+			queue.loadFile('iphone.png');
+
+			const handleLoad = ()=>{
+
+			}
+			queue.on("fileLoad",handleLoad);
+
+		});
+
+		</script> -->
+
+
+
+	</head>
+	<body>
+		<nav class="nav-bar">
+			<img src="apple logo.png" alt="" class="logo">
+			<ul class="nav-items">
+				<li class="active"><a href="index.html">home</a></li>
+				<li><a href="Products.html">products</a></li>
+				<li><a href="#">pricing</a></li>
+				<li><a href="#">contact</a></li>
+			</ul>
+		</nav>
+		<div class="landing">
+			<img class="landing-image" src="./iphone.png" alt="">
+			<div class="texts">
+				<div class="title">
+					The Future  <span>in your hand</span>
+				</div>
+				<div class="desc">
+					Lorem ipsum, dolor sit amet consectetur adipis elit. Asperiores obcaecati.
+				</div>
+				<div class="buttons">
+					<button class="signup">Sign up</button>
+					<button class="login">Log in</button>
+				</div>
+			</div>
+			<div class="links">
+				<a href="#" class="link link1">
+						Ipad
+				</a>
+				<a href="#" class="link link2">
+						Iphone
+				</a>
+				<a href="#" class="link link3">
+						MacBook
+				</a>
+			</div>
+			
+		</div>
+		
+
+
+	</body>
+</html>

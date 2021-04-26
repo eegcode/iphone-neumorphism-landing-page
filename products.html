@@ -1,0 +1,265 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>I-phone</title>
+		<!-- my  Custom Stylesheet -->
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+
+
+<script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+		<script>
+
+			document.body.innerHTML += `<div class="loader" style="position:fixed; top:0; left:0;width: 10px; height: 10px; background: hsl(0,100%,45%); z-index: 999999999999; transition: opacity .3s">
+		</div>`
+
+			window.addEventListener('DOMContentLoaded',()=>{
+
+			
+			const loader = document.querySelector('.loader');
+			const body = document.body;
+
+			var queue = new createjs.LoadQueue();
+
+			queue.on("progress", e =>{
+				const progress = e.progress * 100;
+				if(progress === 0){
+					loader.style.width = 10 + 'px';
+				}else if(progress !== 100){
+				loader.style.width = progress + '%';
+				console.log(progress)
+				}else{
+					body.style.opacity = '1';
+					console.log("done" ,">>>" ,progress)
+					loader.style.opacity = '0';
+
+				}
+				
+			});
+
+			queue.loadFile('apple logo.png');
+			queue.loadFile('iphone.png');
+
+			const handleLoad = ()=>{
+
+			}
+			queue.on("fileLoad",handleLoad);
+
+		});
+
+		</script>
+
+
+		<style>
+
+body{
+	background: hsl(0, 0%, 85%);
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+	opacity: 0;
+	transition: opacity .3s;
+}
+
+.nav-bar{
+	background: hsl(0, 0%, 85%);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: sticky;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 4rem;
+	box-shadow: 0px -4px 10px 5px rgba(0, 0, 0, .2);
+	border-bottom: 1px solid rgba(0, 0, 0, .2);
+	padding: 0 2rem;
+	z-index: 1111;
+}
+
+.nav-bar .logo{
+	width: 40px;
+	cursor: pointer;
+	margin-left: 50px;
+}
+
+
+.nav-bar .nav-items{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.nav-bar .nav-items li{
+	list-style-type: none;
+	margin-right: 20px;
+}
+
+.nav-bar .nav-items li a{
+	text-decoration: none;
+	font-size: 1.2rem;
+	color: hsl(220, 100%, 10%);
+	text-transform: capitalize;
+	padding: 3px 6px;
+	transition: box-shadow .4s;
+	border-radius: 5px;
+}
+.nav-bar .nav-items li.active a{
+	box-shadow: 2px 2px 4px 3px rgba(0, 0, 0, .2),
+				-2px -2px 4px 3px rgba(255, 255, 255, .7);
+}
+
+.nav-bar .nav-items li a:hover{
+	box-shadow: 2px 2px 4px 3px rgba(0, 0, 0, .2),
+				-2px -2px 4px 3px rgba(255, 255, 255, .7);
+}
+			
+			li{
+				list-style-type: ;
+				padding: 1px 10px;
+				margin-inline: 1px 5px;
+			}
+
+			.product{
+				display: flex;
+				justify-content: space-between;
+				align-items: start;
+				padding: 50px 20px;
+				
+			}
+			.product:nth-child(even){
+				flex-direction: row-reverse;
+				background: hsla(220, 50%, 70%, .5);
+			}
+
+			.product .texts{
+				width: 70%;
+			}
+			.product img{
+				margin-right: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<nav class="nav-bar">
+			<img src="apple logo.png" alt="" class="logo">
+			<ul class="nav-items">
+				<li><a href="index.html">home</a></li>
+				<li  class="active"><a href="Products.html">Products</a></li>
+				<li><a href="#">pricing</a></li>
+				<li><a href="#">contact</a></li>
+			</ul>
+		</nav>
+
+		<h1 style="text-align: center;
+		font-size: 3rem; margin-bottom: -10px;">Products</h1>
+
+		<div class="products">
+			<div class="product">
+				<div class="texts">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat delectus quia cumque accusantium rerum maxime dolorum eos qui reiciendis doloremque?
+					<ul>
+						<h5>Specs</h5>
+						<li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, voluptates!</li>
+						<li>Lorem, ipsum.</li>
+						<li>Lorem ipsum, dolor.</li>
+						<li>Lorem, ipsum dolor sit amet, consectetur adipisicing.</li>
+						<li>Lorem, ipsum, dolor.</li>
+					</ul>
+				</div>
+				<img src="i1.png" alt="">
+			</div>
+			<div class="product">
+				<div class="texts">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat delectus quia cumque accusantium rerum maxime dolorum eos qui reiciendis doloremque?
+					<ul>
+						<h5>Specs</h5>
+						<li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, voluptates!</li>
+						<li>Lorem, ipsum.</li>
+						<li>Lorem ipsum, dolor.</li>
+						<li>Lorem, ipsum dolor sit amet, consectetur adipisicing.</li>
+						<li>Lorem, ipsum, dolor.</li>
+					</ul>
+				</div>
+				<img src="i[hone5c.png" alt="">
+			</div>
+			<div class="product">
+				<div class="texts">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat delectus quia cumque accusantium rerum maxime dolorum eos qui reiciendis doloremque?
+					<ul>
+						<h5>Specs</h5>
+						<li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, voluptates!</li>
+						<li>Lorem, ipsum.</li>
+						<li>Lorem ipsum, dolor.</li>
+						<li>Lorem, ipsum dolor sit amet, consectetur adipisicing.</li>
+						<li>Lorem, ipsum, dolor.</li>
+					</ul>
+				</div>
+				<img src="iphone3g.png" alt="">
+			</div>
+			<div class="product">
+				<div class="texts">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat delectus quia cumque accusantium rerum maxime dolorum eos qui reiciendis doloremque?
+					<ul>
+						<h5>Specs</h5>
+						<li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, voluptates!</li>
+						<li>Lorem, ipsum.</li>
+						<li>Lorem ipsum, dolor.</li>
+						<li>Lorem, ipsum dolor sit amet, consectetur adipisicing.</li>
+						<li>Lorem, ipsum, dolor.</li>
+					</ul>
+				</div>
+				<img src="iphone5.png" alt="">
+			</div>
+			<div class="product">
+				<div class="texts">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat delectus quia cumque accusantium rerum maxime dolorum eos qui reiciendis doloremque?
+					<ul>
+						<h5>Specs</h5>
+						<li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, voluptates!</li>
+						<li>Lorem, ipsum.</li>
+						<li>Lorem ipsum, dolor.</li>
+						<li>Lorem, ipsum dolor sit amet, consectetur adipisicing.</li>
+						<li>Lorem, ipsum, dolor.</li>
+					</ul>
+				</div>
+				<img src="iphone4.png" alt="">
+			</div>
+			<div class="product">
+				<div class="texts">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat delectus quia cumque accusantium rerum maxime dolorum eos qui reiciendis doloremque?
+					<ul>
+						<h5>Specs</h5>
+						<li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, voluptates!</li>
+						<li>Lorem, ipsum.</li>
+						<li>Lorem ipsum, dolor.</li>
+						<li>Lorem, ipsum dolor sit amet, consectetur adipisicing.</li>
+						<li>Lorem, ipsum, dolor.</li>
+					</ul>
+				</div>
+				<img src="iphone4s.png" alt="">
+			</div>
+			<div class="product">
+				<div class="texts">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat delectus quia cumque accusantium rerum maxime dolorum eos qui reiciendis doloremque?
+					<ul>
+						<h5>Specs</h5>
+						<li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, voluptates!</li>
+						<li>Lorem, ipsum.</li>
+						<li>Lorem ipsum, dolor.</li>
+						<li>Lorem, ipsum dolor sit amet, consectetur adipisicing.</li>
+						<li>Lorem, ipsum, dolor.</li>
+					</ul>
+				</div>
+				<img src="iphone5.png" alt="">
+			</div>
+		</div>
+
+
+
+
+	</body>
+</html>
